@@ -1,36 +1,38 @@
-## About the Project
+## About the Product
 
-The project contains the Government of Alberta UI components. The output packages support multiple model frontend frameworks, such as React, Angular and Vue.
+The product contains the Government of Alberta UI components. The output packages support multiple model frontend frameworks, including, Web components, React, and Angular.
 
-### Contribution Guidelines
+### Contribute
 
-The design system team is using “Discussions” in the UI-components GitHub repository for managing the creation and assessment of new ideas for platform components, services, and capabilities.
+#### An Idea or enhancement
 
-#### Ideas for enhancements, additions, or improvements
+Whether proposing a component or building a new one, your contribution will help us deliver better services for the citizens of Alberta. Successful proposals need to show that the component or pattern being suggested would be [useful and unique](https://goa-dio.atlassian.net/wiki/spaces/DS/pages/2311913690/Design+System+Criteria)
 
-Before creating a new discussion topic, check the discussion board for any existing ideas that may match yours. If there is a good match, please add your examples and comments to the existing discussion instead of creating a new one.
+How to contribute
+Present your idea or suggestion during the [Design System Office Hour meetings](https://goa-dio.atlassian.net/wiki/spaces/DS/pages/2342813697) - no need to schedule, you can just show up! Be prepared to:
 
-Add a new discussion topic 
+Explain your project goals; and
 
-If a related discussion topic already exists please join in the discussion!
+Show multiple options explored with and without the Design System components (it does not need to be a polished presentation, but should have enough detail to help us understand the request and why it is needed). 
 
-Provide a high-level description, relevant links and examples of the idea to the discussion topic.
+Next, present your work in the [Community Open Forum](https://goa-dio.atlassian.net/wiki/spaces/DS/pages/2311848191) meeting. Our team will coordinate a time with you to present your work to other designers and developers and collect feedback.
 
-Socialize your discussion topic with your colleges to help refine and drive out contexts and use cases. If possible have those team members join the “discussion”.
+Once approved, add the item to the [Design System backlog](https://github.com/GovAlta/ui-components/projects/4). When the work begins, we will work with the requesting team to build out the design and development within their context. 
 
-“Vote” on the topics that you think are the highest priority.
+#### Code
+Have a new component that you think will be useful or encountered a bug and would like to fix it yourself? We encourage contributions to the UI Component Library, but, in order to maintain organization and ensure quality components we have some processes and guidelines to be followed.
 
-#### What happens to these "discussions?"
+##### Coding Guidelines
 
-Discussion topics that have the most votes and/or input from a number of different team members will be evaluated every two-week cycle by the Design System team. Those items that  
+[Coding Guidelines](.github/contribution_guidelines/coding_standards.md)
 
-Discussion topics that have the most number of votes and/or input will be evaluated 
+##### Bug Fixes
 
-Opportunities are assessed against WIP limits.
+[Contributing bug fixes](.github/contribution_guidelines/contributing_bugfix.md)
 
-After an assessment, selected “discussions” will be transitioned to “issues” and assigned and prioritized in the different “project” views (Figma, Angular, React, etc.)
+##### Features
 
-[Contributing](contributing.md)
+[Contributing features](.github/contribution_guidelines/contributing_feature.md)
 
 ### Library and Applications
 
