@@ -1,6 +1,6 @@
 ---
-name: Propose an addition or update to the design system
-about: Work with the design system team to add or update the design system
+name: Request a feature
+about: propose an addition or update to the design system
 title: ''
 labels: Update or addition
 assignees: ''
