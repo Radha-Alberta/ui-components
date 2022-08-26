@@ -16,6 +16,7 @@
     | "date"
     | "datetime-local"
     | "month"
+    | "range"
     | "search"
     | "tel"
     | "time"
@@ -34,6 +35,11 @@
   export let error: string = "false";
   export let testid: string = "";
   export let width: string = "30ch";
+  export let arialabel: string = ""; 
+
+  export let min: string = "";
+  export let max: string = "";
+  export let step: number;
 
   // character counter
   export let showcounter: string = "false";
@@ -110,6 +116,11 @@
       {type}
       {value}
       {placeholder}
+      {min}
+      {max}
+      {step}
+      role="textbox" 
+      aria-label={arialabel || name}
       on:keyup={onKeyUp}
       on:change={onKeyUp}
     />
@@ -127,7 +138,6 @@
     <!-- Trailing Icon Button -->
     {#if trailingicon && handlesTrailingIconClick}
       <goa-icon-button
-        class="goa-input-trailing-icon"
         on:click={doClick}
         disabled={isDisabled}
         variant="nocolor"
@@ -214,19 +224,11 @@
   }
 
   .goa-input-leading-icon {
-    display: flex;
-    align-items: center;
     margin-left: 0.5rem;
   }
 
   .goa-input-trailing-icon {
-    display: flex;
-    align-items: center;
     margin-right: 0.5rem;
-  }
-
-  .goa-input-trailing-icon > .goa-icon-button {
-    margin-right: -0.5rem;
   }
 
   input {
