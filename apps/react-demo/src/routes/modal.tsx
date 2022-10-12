@@ -1,18 +1,20 @@
 import * as React from 'react';
-import { GoAButton, GoAModal, GoAButtonGroup } from "@abgov/react-components";
+import { GoAButton, GoAModal, GoAButtonGroup, ModalTransition } from "@abgov/react-components";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Modal() {
+
+  const navigate = useNavigate();
 
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [speed, setSpeed] = useState<any>("none");
+  const [speed, setSpeed] = useState<ModalTransition>("none");
 
-  function show(speed: string) {
+  function show(speed: ModalTransition) {
     setSpeed(speed)
-    setShowModal(true)
+    setShowModal3(true)
   }
 
   return (
@@ -33,7 +35,7 @@ export default function Modal() {
 
       <br />
       <GoAButton onClick={() => setShowModal2(true)}> Open Modal with actions</GoAButton>
-      <GoAModal heading="Do you agree?" open={showModal2} >
+      <GoAModal heading="Do you agree?" open={showModal2} transition="fast" >
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia obcaecati
           id molestiae, natus dicta, eaque qui iusto similique, libero explicabo
@@ -64,8 +66,19 @@ export default function Modal() {
           eligendi eius laboriosam! Repellendus ducimus officia asperiores. Eos, eius
           numquam.
         </p>
+
+        <GoAButton type="primary" onClick={() => {
+          setShowModal3(false);
+          // setTimeout(() => navigate("/input"), 300) } // will allow any modal animations to be run 
+          navigate("/input")
+        }}>
+          Click
+        </GoAButton>
       </GoAModal>
 
+      {/* To show scrollbars */ }
+      <div style={{height: "100vh"}}></div>
     </>
   );
 }
+
