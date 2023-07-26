@@ -6,9 +6,13 @@ import { Component } from "@angular/core";
   styleUrls: ["./button-component.component.css"],
 })
 export class ButtonComponentComponent {
-  constructor() {}
+  constructor() { }
 
   onClick() {
     console.log("clicked");
+  }
+
+  onInputChangeEvent(e: Event) {
+    console.log("Event: ", e);
   }
 }
