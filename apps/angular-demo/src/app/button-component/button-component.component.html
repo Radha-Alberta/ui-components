@@ -2,12 +2,26 @@
 
 <h2>Types</h2>
 <goa-button (_click)="onClick()" data-testid="primarySubmit" type="submit">Primary Submit</goa-button>
-<goa-input
-  id="foo"
-  name="foo"
-  data-testid="primaryInput"
-  (_change)="onInputChangeEvent($event)"
-></goa-input>
+<goa-input  id="foo"  name="foo"  data-testid="primaryInput"  (_change)="onInputChangeEvent($event)"></goa-input>
+
+<goa-accordion data-testid="primaryAccordion" heading="Heading">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+</goa-accordion>
+
+<goa-badge data-testid="primaryBadge" type="information" content="Information"></goa-badge>
+
+<goa-checkbox data-testid="primaryCheckBox" name="desserts" text="Ice Cream" value="10" [checked]="checkbox1Checked" (_change)="onChange()"></goa-checkbox>
+
+<goa-chip data-testid="primaryChip" content="Chip Text" error="true" deletable="true" (_click)="onClick()"></goa-chip>
+
+<goa-circular-progress data-testid="primaryProgress" variant="inline" size="small" visible></goa-circular-progress>
+
+<goa-dropdown data-testid="primaryDropdown" [native]="isMobile" value="green">
+  <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+  <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+  <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+</goa-dropdown>
+
 <goa-button (_click)="onClick()" type="secondary">Secondary</goa-button>
 <goa-button (_click)="onClick()" type="submit" ml="xl" mr="xl" mb="xl" mt="l">
   Get Started here

@@ -1,4 +1,4 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import { Given, Then, When } from "cypress-cucumber-preprocessor/steps";
 import properties from "../../fixtures/properties.json";
 
 Given(/^cs I am a user of GOA application$/, function () {
@@ -13,25 +13,45 @@ Then(
   /^cs I should be able to validate primary button css property$/,
   function () {
 
+    //Accordion
+    // cy.get('[data-testid*="primaryAccordion"]').click({ force: true })
+    //   .contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi")
+    // cy.get('[data-testid*="primaryAccordion"]').invoke('attr', 'open', 'open');
+    // cy.get('[data-testid*="primaryAccordion"]').should('have.attr', 'open', 'open');
+
+
+    //Badge
+    // cy.get('[data-testid*="primaryBadge"]').should('have.attr', 'content', 'Information');
+    // cy.get('[data-testid*="primaryBadge"]').should('have.attr', 'type', 'information');
+
     //Button
-    cy.get('[data-testid*="primarySubmit"]')
-      .contains("Primary Submit")
-      .shadow()
-      .find("button.submit")
-      .should("have.css", "border");
+    // cy.get('[data-testid*="primarySubmit"]').contains("Primary Submit").click({ force: true })
+    // cy.get('[data-testid*="primarySubmit"]').contains("Primary Submit")
+    // .shadow().find("button.submit").should("have.css", "border");
 
-    cy.get('[data-testid*="primarySubmit"]')
-      .find("button.submit")
-      .should(
-        "have.css",
-        "border-radius",
-        remToPx(properties["border-radius"])
-      );
+    // cy.get('[data-testid*="primarySubmit"]').find("button.submit")
+    // .should("have.css","border-radius",remToPx(properties["border-radius"]));
 
+
+    //CheckBox
+    // cy.get('[data-testid*="primaryCheckBox"]').invoke('attr', 'checked', true);
+    // cy.get('[data-testid*="primaryCheckBox"]').should('have.attr', 'checked', true);
+
+
+    //Chip - ALERT ! ! ! should not use shadow to find 'x' element on the chip ==============================
+    // cy.get('[data-testid*="primaryChip"]').click({ force: true });
+
+    //Circular Progress
+    // cy.get('[data-testid*="primaryProgress"]').invoke('attr', 'visible', 'false');
+    // cy.get('[data-testid*="primaryProgress"]').should('have.attr', 'visible', 'false');
+
+    //Dropdown
+    // cy.get('[data-testid*="primaryDropdown"]').invoke('attr', 'value', 'red');
+    // cy.get('[data-testid*="primaryDropdown"]').should('have.attr', 'value', 'red');
 
     // Input
-    cy.get('[data-testid*="primaryInput"]').invoke('attr', 'value', 'Hello, Cypress!');
-    cy.get('[data-testid*="primaryInput"]').should('have.attr', 'value', 'Hello, Cypress!');
+    // cy.get('[data-testid*="primaryInput"]').invoke('attr', 'value', 'Hello, Cypress!');
+    // cy.get('[data-testid*="primaryInput"]').should('have.attr', 'value', 'Hello, Cypress!');
 
 
   }

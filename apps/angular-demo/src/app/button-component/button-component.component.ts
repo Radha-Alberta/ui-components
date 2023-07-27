@@ -6,6 +6,8 @@ import { Component } from "@angular/core";
   styleUrls: ["./button-component.component.css"],
 })
 export class ButtonComponentComponent {
+  checkbox1Checked = false;
+  isMobile = window.matchMedia("(any-pointer:coarse)").matches;
   constructor() { }
 
   onClick() {
@@ -14,5 +16,9 @@ export class ButtonComponentComponent {
 
   onInputChangeEvent(e: Event) {
     console.log("Event: ", e);
+  }
+
+  onChange() {
+    this.checkbox1Checked = !this.checkbox1Checked;
   }
 }
